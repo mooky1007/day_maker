@@ -6,7 +6,7 @@ const RecordList = ({ setContent, changeContent }) => {
     const [data, setData] = useState([]);
 
     const getRecordList = () => {
-        axios.get('http://127.0.0.1:3001/record').then((res) => {
+        axios.get('http://http://43.201.253.26:3001/record').then((res) => {
             const { data } = res;
             setData(data.sort((a, b) => b.createdDate - a.createdDate));
         });
@@ -21,7 +21,7 @@ const RecordList = ({ setContent, changeContent }) => {
     }, []);
 
     const deleteTodoItem = async (key) => {
-        await axios.delete(`http://127.0.0.1:3001/delete_record?key=${key}`);
+        await axios.delete(`http://http://43.201.253.26:3001/delete_record?key=${key}`);
         getRecordList();
     };
 

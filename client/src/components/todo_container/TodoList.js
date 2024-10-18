@@ -12,18 +12,18 @@ const TodoList = ({ type, data, setData }) => {
     }, []);
 
     const getTodoList = () => {
-        axios.get('http://127.0.0.1:3001/todo').then((res) => {
+        axios.get('http://http://43.201.253.26:3001/todo').then((res) => {
             const { data } = res;
             setData(data);
         });
     };
 
     const deleteTodo = async (key) => {
-        const { status } = await axios.delete(`http://127.0.0.1:3001/delete_todo?key=${key}`);
+        const { status } = await axios.delete(`http://http://43.201.253.26:3001/delete_todo?key=${key}`);
         if (status === 200) setData((prev) => prev.filter((el) => el.key !== key));
     };
     const updateTodo = async (key, data) => {
-        const { status } = await axios.put(`http://127.0.0.1:3001/update_todo`, data);
+        const { status } = await axios.put(`http://http://43.201.253.26:3001/update_todo`, data);
         if (status === 200)
             setData((prev) =>
                 prev.map((el) => {
