@@ -114,5 +114,5 @@ app.put('/update_record', async (req, res) => {
 });
 
 app.listen(3001, () => {
-    console.log(`listening port 3000`);
+    console.log(`listening port 3001`);
 });
