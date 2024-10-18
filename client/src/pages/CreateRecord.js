@@ -16,7 +16,7 @@ const CreateRecord = ({ title, back = false }) => {
         if (record_title === '') return;
         if (content === '') return;
 
-        await axios.post('http://http://43.201.253.26:3001/create_record', {
+        await axios.post('http://43.201.253.26:3001/create_record', {
             title: record_title,
             emotion: selectedEmotion,
             content: content,

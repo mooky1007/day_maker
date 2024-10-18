@@ -7,7 +7,7 @@ const TodoForm = ({ type, setData }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (content === '') return;
-        const { data } = await axios.post('http://http://43.201.253.26:3001/create_todo', {
+        const { data } = await axios.post('http://43.201.253.26:3001/create_todo', {
             type: type,
             content: content,
             checked: false,

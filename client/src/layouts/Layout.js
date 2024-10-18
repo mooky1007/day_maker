@@ -8,7 +8,7 @@ const Layout = ({ children, className = '' }) => {
 
     const dataModeCheck = async () => {
         try {
-            const result = await axios.get('http://http://43.201.253.26:3001/severCheck');
+            const result = await axios.get('http://43.201.253.26:3001/severCheck');
             console.log('저장소가 확인되어 서버모드로 변경합니다.');
             setMode('server');
         } catch (err) {

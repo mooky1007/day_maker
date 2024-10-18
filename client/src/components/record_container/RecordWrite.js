@@ -36,12 +36,12 @@ const RecordWrite = ({ mode, data, changeContent }) => {
     };
 
     const createRecord = async (data) => {
-        await axios.post('http://http://43.201.253.26:3001/create_record', data);
+        await axios.post('http://43.201.253.26:3001/create_record', data);
         changeContent('list');
     };
 
     const updateRecord = async (data) => {
-        await axios.put('http://http://43.201.253.26:3001/update_record', data);
+        await axios.put('http://43.201.253.26:3001/update_record', data);
         changeContent('list');
     };
 
