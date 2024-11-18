@@ -89,7 +89,7 @@ const TotoItem = ({ type, data, updateTodo, deleteTodo }) => {
                                 적용
                             </button>
                             <button
-                                class="btn"
+                                className="btn"
                                 onClick={() => {
                                     setEditMode(false);
                                 }}
