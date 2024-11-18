@@ -3,7 +3,7 @@ import React from 'react';
 const TodoHeader = ({ type, setType }) => {
     return (
         <div className="container_title">
-            {type === 'dayTodo' ? <h2>오늘의 할일</h2> : <h2>나의 루틴</h2>}
+            {type === 'dayTodo' ? <h2>오늘 할일</h2> : <h2>버킷리스트</h2>}
 
             <div className="button_wrap">
                 {type === 'dayTodo' ? (
@@ -13,7 +13,7 @@ const TodoHeader = ({ type, setType }) => {
                             setType('routine');
                         }}
                     >
-                        나의 루틴 관리
+                        버킷리스트 보기
                     </button>
                 ) : (
                     <button
@@ -22,7 +22,7 @@ const TodoHeader = ({ type, setType }) => {
                             setType('dayTodo');
                         }}
                     >
-                        오늘의 할일 보기
+                        오늘 할일 보기
                     </button>
                 )}
             </div>

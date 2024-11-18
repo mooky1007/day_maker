@@ -22,7 +22,7 @@ const TodoForm = ({ type, setData }) => {
                 type="text"
                 name="todo"
                 id="todo"
-                placeholder={type === 'dayTodo' ? '오늘 할일을 적어주세요.' : '매일 할일을 적어주세요.'}
+                placeholder={type === 'dayTodo' ? '오늘 할일을 적어주세요.' : '언젠가는 해야할일을 적어주세요.'}
                 value={content}
                 onChange={({ target: { value } }) => setContent(value)}
             />
