@@ -717,6 +717,28 @@ html {
           display: flex !important;
         }
       }
+
+      .container {
+        padding-bottom: 58px;
+      }
+
+      .record_edit_container {
+        .emotion_row {
+          margin-bottom: 10px;
+        }
+        .title_row {
+          margin-bottom: 10px;
+        }
+
+        .content_row {
+          margin-bottom: 10px;
+        }
+      }
+
+      .record_edit_container .emotion_row .radio_group {
+        gap: 0;
+        justify-content: space-between;
+      }
     }
   }
 }
