@@ -98,7 +98,12 @@ const TotoItem = ({ type, data, updateTodo, deleteTodo }) => {
                             </button>
                         </>
                     ) : (
-                        <button className="btn" onClick={() => deleteTodo(data.key)}>
+                        <button
+                            className="btn"
+                            onClick={() => {
+                                if (window.confirm('정말 삭제하시겠습니까?')) deleteTodo(data.key);
+                            }}
+                        >
                             삭제
                         </button>
                     )}

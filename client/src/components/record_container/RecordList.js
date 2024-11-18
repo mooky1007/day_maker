@@ -56,7 +56,7 @@ const RecordList = ({ setContent, changeContent }) => {
                                         <button
                                             className="btn"
                                             onClick={() => {
-                                                deleteTodoItem(li.key);
+                                                if(window.confirm('정말 삭제하시겠습니까?')) deleteTodoItem(li.key);
                                             }}
                                         >
                                             삭제
