@@ -23,27 +23,14 @@ const TotoItem = ({ type, data, updateTodo, deleteTodo }) => {
 
             if (now.getMonth() !== lastUpdateDate.getMonth()) {
                 // 달이 다른 경우
-                resetRoutine();
                 return;
             }
 
             if (now.getDate() !== lastUpdateDate.getDate()) {
                 // 일자가 다를 경우
-                resetRoutine();
             }
         }
     }, [type]);
-
-    const resetRoutine = () => {
-        const compleateCheck = checked;
-        setChecked(false);
-        updateTodo(data.key, {
-            ...data,
-            checked: false,
-            lastDay: new Date().getTime(),
-            count: compleateCheck ? (data.count ? (data.count += 1) : 1) : '',
-        });
-    };
 
     return (
         <li className={`${data.checked && type === 'dayTodo' ? 'checked' : ''}`}>
@@ -92,7 +79,6 @@ const TotoItem = ({ type, data, updateTodo, deleteTodo }) => {
                             }}
                         >
                             <span> {data.content}</span>
-                            <span className="count">{type === 'dayTodo' && data.type === 'routine' && `${data.count || 0}회`}</span>
                         </p>
                     )}
                 </div>
