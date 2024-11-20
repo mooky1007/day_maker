@@ -13,7 +13,7 @@ const TodoHeader = ({ type, setType }) => {
                             setType('routine');
                         }}
                     >
-                        버킷리스트 보기
+                        버킷리스트 관리
                     </button>
                 ) : (
                     <button
@@ -22,7 +22,7 @@ const TodoHeader = ({ type, setType }) => {
                             setType('dayTodo');
                         }}
                     >
-                        오늘 할일 보기
+                        오늘 할일 관리
                     </button>
                 )}
             </div>
