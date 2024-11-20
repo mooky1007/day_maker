@@ -240,6 +240,12 @@ html {
 
                 .content {
                   font-size: 12px;
+                  line-height: 1.6;
+
+                  img {
+                    width: 50%;
+                    aspect-ratio: 1/1;
+                  }
                 }
 
                 .memo {
